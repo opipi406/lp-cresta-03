@@ -1,0 +1,340 @@
+@import "variables";
+@import "media-query";
+$text-color: #282f35;
+
+/*****************************************************/
+/*  Base
+/*****************************************************/
+body {
+    font-family: "Noto Serif", "Noto Serif JP", serif;
+    font-size: .9em;
+
+    line-height: 2em;
+
+    color: $text-color;
+}
+
+// 汎用クラス
+.spacer {
+    margin: auto;
+}
+
+/*****************************************************/
+/*  ヘッダー
+/*****************************************************/
+.header {
+    font-style: italic;
+
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 74px;
+    margin-bottom: 1px;
+
+    color: white;
+    background-color: transparent;
+
+    &__title {
+        font-size: 2rem;
+
+        margin-left: $header-side-margin;
+
+        text-align: center;
+        letter-spacing: 3px;
+
+        @include mq-down(md) {
+            font-size: 5vw;
+
+            margin-left: 10%;
+        }
+    }
+
+    // ヘッダーメニュー
+    &__menu {
+        @include mq-up(md) {
+            height: 100%;
+            margin-right: $header-side-margin;
+            ul {
+                display: flex;
+
+                height: 100%;
+
+                li {
+                    font-size: 16px;
+
+                    margin-left: 25px;
+
+                    a {
+                        position: relative;
+
+                        display: block;
+
+                        height: 100%;
+                        line-height: 72px;
+
+                        transition: .3s cubic-bezier(.33, 1, .68, 1);
+
+                        &:hover {
+                            color: #ff1787;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            right: 0;
+                            bottom: 24px;
+
+                            display: block;
+
+                            width: 0;
+                            height: 1.5px;
+
+                            content: "";
+                            transition: .3s cubic-bezier(.33, 1, .68, 1);
+
+                            background-color: #ff1787;
+                        }
+                    }
+                }
+            }
+        }
+        @include mq-down(md) {
+            margin-right: $header-side-margin / 2;
+
+            .burger-menu:not(.open) + ul {
+                pointer-events: none;
+
+                opacity: 0;
+
+                li {
+                    height: 40px;
+
+                    transition: .3s;
+                }
+            }
+
+            ul {
+                position: fixed;
+                z-index: 51;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                display: flex;
+                flex-direction: column;
+
+                padding: 80px 0;
+
+                transition: .3s;
+
+                border-bottom: solid 1px $color-white;
+                background-color: $text-color;
+
+                li {
+                    font-size: 1.5em;
+
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    justify-content: center;
+
+                    transition: .3s;
+
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+        li {
+            text-align: center;
+        }
+    }
+}
+
+/*****************************************************/
+/*  トップ画像
+/*****************************************************/
+.top-img {
+    font-weight: bold;
+
+    position: relative;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 400px;
+
+    color: white;
+    background-image: url("../img/contact-page-bgi@2x.jpg");
+    background-position: center;
+    background-size: cover;
+
+    h1 {
+        font-size: 3rem;
+        font-style: italic;
+
+        line-height: 400px;
+
+        text-align: center;
+        letter-spacing: 8px;
+
+        @include mq-down(sm) {
+            font-size: 10vw;
+        }
+    }
+
+    .bg-text {
+        font-size: 4rem;
+
+        position: absolute;
+        bottom: 60px;
+        left: 60px;
+
+        display: block;
+
+        opacity: .05;
+        color: white;
+
+        @include mq-down(md) {
+            font-size: 10vw;
+
+            left: 15px;
+        }
+    }
+}
+
+/*****************************************************/
+/*  Submitボタン
+/*****************************************************/
+button[type="submit"] {
+    font-size: 1.2em;
+
+    display: block;
+
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    margin: 40px auto;
+
+    transition: .3s;
+    text-align: center;
+
+    color: $text-color;
+    border-radius: 30px;
+    background-color: #f7d43f;
+    box-shadow: 0 0 6px #1b1310;
+
+    &:hover {
+        transform: scale(1.05);
+
+        background-color: #fff7d5;
+    }
+}
+
+
+.container {
+    margin: 60px 40px;
+
+    @include mq-down(md) {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+/*****************************************************/
+/*  お問い合わせフォーム
+/*****************************************************/
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 75%;
+    margin: auto;
+
+    @include mq-down(md) {
+        width: 100%;
+    }
+
+    .contact-detail {
+        display: flex;
+
+        @include mq-down(md) {
+            flex-direction: column;
+        }
+
+        > * + * {
+            @include mq-up(md) {
+                margin-left: 20px;
+            }
+            @include mq-down(md) {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    label {
+        font-weight: bold;
+
+        align-self: flex-start;
+
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    input,
+    textarea {
+        border: 1px solid;
+        border-radius: 2px;
+    }
+    input {
+        height: 32px;
+    }
+    button {
+        font-size: 1.2em;
+        font-weight: bold;
+
+        width: 180px;
+        height: 50px;
+        margin: 30px auto;
+
+        transition: .3s;
+        text-align: center;
+
+        color: white;
+        border-radius: 25px;
+        background-color: $color-black;
+        box-shadow: 0 0 3px black;
+
+        &:hover {
+            color: black;
+            border: 1px solid black;
+            background-color: white;
+            box-shadow: 0 0 3px black;
+        }
+    }
+}
+
+/*****************************************************/
+/*  フッター
+/*****************************************************/
+footer {
+    height: 79px;
+
+    p {
+        line-height: 79px;
+
+        text-align: center;
+    }
+}
