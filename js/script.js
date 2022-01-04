@@ -4,7 +4,7 @@ $(function () {
         $logo = $(".header__logo"),
         $title = $(".header__title"),
         $burgerMenu = $(".burger-menu");
-    const boundaryTitleY = 620, boundaryMenuY = 700;
+    const boundaryTitleY = 300, boundaryMenuY = 420;
     const jsClsName = "js-reverce-color";
 
     // ヘッダー内文字色の反転処理

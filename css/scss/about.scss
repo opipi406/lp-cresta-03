@@ -37,7 +37,6 @@ $fv-height: 800px;
         height: 70vw;
 
         object-fit: cover;
-
         @include mq-up(md) {
             max-height: 387px;;
         }
@@ -91,10 +90,11 @@ $fv-height: 800px;
 
 
 /*****************************************************/
-/*  Form
+/*  Section Base
 /*****************************************************/
-.container {
+section {
     padding: 60px 0 40px 0;
+
     @include mq-up(md) {
         margin: 0 $section-side-margin;
     }
@@ -104,99 +104,112 @@ $fv-height: 800px;
     @include mq-down(sm) {
         margin: 0 $section-side-margin-resp;
     }
-}
 
-form {
-    margin-top: 40px;
-
-    label {
-        &.required::after {
-            font-size: .9rem;
-
-            margin-left: 10px;
-            padding: 0 5px;
-
-            content: "必須";
-
-            color: white;
-            background: $color-black;
-        }
-    }
-
-    .kind-container {
-        display: flex;
-
-        margin: 15px 0 30px 0;
-
-        @include mq-down(sm) {
-            flex-direction: column;
-        }
-        > * + * {
-            @include mq-up(sm) {
-                margin-left: 20px;
-            }
-            @include mq-down(sm) {
-                margin-top: 5px;
-            }
-        }
-    }
-
-    label {
-        margin-bottom: 10px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        display: block;
-
-        width: 100%;
-        margin-bottom: 20px;
-
-        border: solid 1px $color-black;
-    }
-    textarea {
-        resize: none;
-    }
-
-    .agree-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    h1 {
+        font-size: 2rem;
 
         margin: 30px 0;
-
-        label {
-            margin: 0 0 0 10px;
-        }
     }
+    h2 {
+        font-size: 1.5rem;
 
-    .policy-label {
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        margin-top: 40px;
         margin-bottom: 15px;
     }
+}
 
-    .policy-container {
-        overflow-y: scroll;
+/*****************************************************/
+/*  Visions
+/*****************************************************/
+.vision {
+    display: flex;
+    justify-content: center;
 
-        height: 226px;
-        padding: 10px;
+    padding-bottom: 120px;
+}
 
-        border: solid 1px $color-black;
+/*****************************************************/
+/*  CEO Message
+/*****************************************************/
+.ceo-message {
+    position: relative;
 
-        h1 {
-            font-weight: bold;
-        }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
 
-        h2 {
-            margin-top: 20px;
+        width: 40%;
+        min-width: 320px;
+        max-width: 420px;
+
+        @include mq-down(md) {
+            left: -$section-side-margin-resp;
         }
     }
 
-    button {
-        margin: auto;
+    &__text-container {
+        margin-top: 80px;
+        margin-left: 20vw;
+
+        background: $color-bg;
+
+        @include mq-up(lg) {
+            padding: 60px 150px;
+        }
+        @include mq-down(lg) {
+            padding: 60px 60px;
+        }
+        @include mq-down(md) {
+            margin-right: 0;
+            margin-left: 0;
+            padding: 60px 20px;
+        }
+    }
+}
+
+/*****************************************************/
+/*  Company
+/*****************************************************/
+.company {
+    hr {
+        margin-bottom: 20px;
+
+        color: #dddddd;
+    }
+
+    .company-info {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 40px;
+        margin-left: auto;
+
+        &__row {
+            display: flex;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #dddddd;
+            dt {
+                width: 20%;
+
+                @include mq-down(md) {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    .maps-container {
+        width: 100%;
+        height: 360px;
+
+        background-color: #dddddd;
+
+        div {
+            width: 100%;
+            height: 100%;
+            line-height: 360px;
+            text-align: center;
+        }
     }
 }

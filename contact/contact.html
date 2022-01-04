@@ -4,73 +4,143 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cresta Design | お問い合わせ</title>
+  <title>DEGSMILE inc. | デザインカンプ上級編</title>
 
   <!-- Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/destyle.min.css">
-  <link rel="stylesheet" media="all" href="../css/contact.css">
-  <link rel="stylesheet" media="all" href="../css/burger-menu.css">
+  <link rel="stylesheet" href="/css/destyle.min.css">
+  <link rel="stylesheet" media="all" href="/css/common.css">
+  <link rel="stylesheet" media="all" href="/css/contact.css">
+  <link rel="stylesheet" media="all" href="/css/burger-menu.css">
 
   <!-- JavaScript -->
-  <script src="../js/burger-menu.js"></script>
+  <script src="/js/script.js"></script>
 </head>
 
+
 <body>
-  <header class="header">
-    <a href="../index.html" class="header__title">Cresta Design</a>
-    <span class="spacer"></span>
-    <nav class="header__menu">
-      <button class="burger-menu">
-        <div class="burger-menu__lines"></div>
-      </button>
-      <ul>
-        <li><a href="index.html#concept">Concept</a></li>
-        <li><a href="index.html#works">Works</a></li>
-        <li><a href="index.html#service">Service</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="header-wrapper">
+    <div class="header">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.148" height="63" viewBox="0 0 60.148 63">
+        <defs>
+          <filter id="前面オブジェクトで型抜き_1" x="0" y="0" width="60.148" height="63" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity="0.161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+        </defs>
+        <g id="グループ_8" data-name="グループ 8" transform="translate(-50 0.063)">
+          <g transform="matrix(1, 0, 0, 1, 50, -0.06)" filter="url(#前面オブジェクトで型抜き_1)">
+            <path class="header__logo" id="前面オブジェクトで型抜き_1-2" data-name="前面オブジェクトで型抜き 1" d="M22.969,45a23.236,23.236,0,0,1-8.941-1.768,22.925,22.925,0,0,1-7.3-4.822A22.405,22.405,0,0,1,1.8,31.258a22.141,22.141,0,0,1,.838-19.247A22.842,22.842,0,0,1,9.68,4.146v36.6H26.535a25.018,25.018,0,0,0,8.906-1.533,18.276,18.276,0,0,0,6.706-4.33A23.061,23.061,0,0,1,22.969,45ZM26.11,33.7H18.266v-23H26.11a12.673,12.673,0,0,1,8.858,3.087A11.152,11.152,0,0,1,38.3,22.2a11.152,11.152,0,0,1-3.332,8.414A12.673,12.673,0,0,1,26.11,33.7ZM40.661,8.152c-3.627-2.946-8.512-4.5-14.126-4.5H10.424a23.321,23.321,0,0,1,30.239,4.5Z" transform="translate(9 6)" fill="#000"/>
+          </g>
+        </g>
+      </svg>
+      
+      <a href="/index.html" class="header__title">DIGSMILE <span>INC.</span></a>
+      <span class="spacer"></span>
+      <nav class="header__menu">
+        <button class="burger-menu">
+          <div class="burger-menu__lines"></div>
+          <span>MENU</span>
+        </button>
+        <ul>
+          <img src="/img/simbol-logo.svg" alt="ロゴ" width="42" height="42">
+          <li><a href="/about/about.html">ABOUT US</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#culture">CULTURE</a></li>
+          <li><a href="#topics">TOPICS</a></li>
+          <li><a href="/contact/contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="top-img">
-    <h1>Contact</h1>
-    <span class="bg-text">Contact us</span>
+  <div id="overlay"></div>
+
+  <div class="fv">
+    <div class="fv__bg"></div>
+    <img class="fv__img" src="/img/heading-img_contact.jpg" alt="">
+    <div class="fv__text">
+      <h1>CONTACT</h1>
+      <h2>お問い合わせ</h2>
+    </div>
   </div>
 
   <div class="container">
+    <p>ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当者からご連絡させていただきます。</p>
+
     <form action="">
-      <label>お問い合わせ内容</label>
-      <div class="contact-detail">
+      <label class="required">お問い合わせ種別</label>
+      <div class="kind-container">
         <div>
-          <input type="radio" name="detail" id="detail-doc-request">
-          <label for="detail-doc-request">資料請求</label>
+          <input type="radio" name="kind" id="kind-request">
+          <label for="kind-request">制作依頼</label>
         </div>
         <div>
-          <input type="radio" name="detail" id="detail-tel">
-          <label for="detail-tel">お電話でのご相談を希望</label>
+          <input type="radio" name="kind" id="kind-recruit">
+          <label for="kind-recruit">採用</label>
         </div>
         <div>
-          <input type="radio" name="detail" id="detail-app">
-          <label for="detail-app">申し込み</label>
+          <input type="radio" name="kind" id="kind-ir">
+          <label for="kind-ir">IR</label>
+        </div>
+        <div>
+          <input type="radio" name="kind" id="kind-other">
+          <label for="kind-other">その他</label>
         </div>
       </div>
-      <label for="your-name">担当者名</label>
-      <input type="text" name="your-name">
-      <label for="tel">電話番号</label>
-      <input type="text" name="tel">
-      <label for="tel">メールアドレス</label>
-      <input type="email" name="email">
-      <label for="content">お問い合わせ内容</label>
-      <textarea name="content" cols="30" rows="10"></textarea>
-      <button type="submit">Submit</button>
+
+      <label>会社名・団体名</label>
+      <input type="text" name="your-org">
+
+      <label class="required">お名前</label>
+      <input type="text" name="your-name" required>
+
+      <label class="required" for="tel">メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>電話番号</label>
+      <input type="text" name="tel" required>
+
+      <label class="required">お問い合わせ内容</label>
+      <textarea name="content" cols="30" rows="10" required resi></textarea>
+
+      <p class="policy-label">PRIVACY POLICY</p>
+      <div class="policy-container">
+        <h1>個人情報保護方針</h1>
+        <p>株式会社DIGSMILE（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。</p>
+        <h2>1.個人情報の収集、利用</h2>
+        <p>当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。</p>
+        <h2>2.個人情報の第三者への開示と提供</h2>
+        <p>収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。
+          業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。</p>
+        <h2>3.個人情報の保護</h2>
+        <p>当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。</p>
+        <h2>4.法令および関連規範の遵守</h2>
+        <p>当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。</p>
+        <h2>5.個人情報の開示・訂正・削除</h2>
+        <p>当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。</p>
+        <br>
+        <p>法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。</p>
+        <br>
+        <p>お問い合わせ窓口<br>当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。<br>株式会社ファイアープレイス<br>044-589-4333</p>
+      </div>
+
+      <div class="agree-wrapper">
+        <input type="checkbox" name="agree" id="agree" required>
+        <label for="agree">個人情報の取り扱いについて同意のうえ送信します。</label>
+      </div>
+
+      <button class="btn" type="submit">送信</button>
     </form>
   </div>
 
