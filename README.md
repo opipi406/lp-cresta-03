@@ -1,9 +1,9 @@
-# クリスタWebデザインカンプ 上級編
+# クリスタLPデザインカンプ 上級編
 PENGIN LLC.様提供のXDデザインカンプのコーディング練習  
 
 ---
-## 制作物リンク
-http://opipi.main.jp/portfolio/portfolio3/
+## リンク
+https://opipi.sakura.ne.jp/portfolio/cresta03/
 
 ---
 ## 参考リンク
